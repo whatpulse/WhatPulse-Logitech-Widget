@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="WhatPulseLogitechApp.cpp" />
+    <ClCompile Include="WhatPulseLogitech.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Logitech\EZ_LCD.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\EZ_LCD_Page.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDAnimatedBitmap.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDBase.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDBitmap.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDCollection.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDColorProgressBar.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDColorText.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDConnection.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDGfxBase.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDGfxColor.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDGfxMono.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDIcon.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDOutput.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDPage.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDPaginateText.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDPopup.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDProgressBar.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDScrollingText.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDSkinnedProgressBar.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDStreamingText.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="Logitech\LCDUI\LCDText.cpp">
+      <Filter>Logitech</Filter>
+    </ClCompile>
+    <ClCompile Include="IniHandler.cpp" />
+    <ClCompile Include="SettingsDialog.cpp" />
+    <ClCompile Include="jsoncpp\src\lib_json\json_reader.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp">
+      <Filter>JSON</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WhatPulseLogitechApp.h" />
+    <ClInclude Include="WhatPulseLogitech.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WinHTTPClient\RegExp.h" />
+    <ClInclude Include="WinHTTPClient\StringProcess.h" />
+    <ClInclude Include="WinHTTPClient\WinHttpClient.h" />
+    <ClInclude Include="Logitech\EZ_LCD.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\EZ_LCD_Defines.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\EZ_LCD_Page.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDAnimatedBitmap.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDBase.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDBitmap.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDCollection.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDColorProgressBar.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDColorText.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDConnection.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDGfxBase.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDGfxColor.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDGfxMono.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDIcon.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDOutput.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDPage.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDPaginateText.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDPopup.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDProgressBar.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDScrollingText.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDSkinnedProgressBar.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDStreamingText.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDText.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\LCDUI\LCDUI.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="Logitech\lglcd.h">
+      <Filter>Logitech</Filter>
+    </ClInclude>
+    <ClInclude Include="IniHandler.h" />
+    <ClInclude Include="SettingsDialog.h" />
+    <ClInclude Include="jsoncpp\src\lib_json\json_tool.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\forwards.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\assertions.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\autolink.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\config.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\features.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\json.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\reader.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\value.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\version.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="jsoncpp\include\json\writer.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WhatPulseLogitech.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\whatpulse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\WhatPulseLogitech.rc2" />
+    <None Include="jsoncpp\src\lib_json\json_valueiterator.inl">
+      <Filter>JSON</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Logitech">
+      <UniqueIdentifier>{a056a60d-f626-466a-9191-f7d5f0387a33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON">
+      <UniqueIdentifier>{811d3cb7-054c-4b04-90ee-1a384c98a53e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
