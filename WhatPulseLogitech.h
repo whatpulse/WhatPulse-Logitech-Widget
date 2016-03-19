@@ -18,8 +18,6 @@
 #include "resource.h"
 #include "SettingsDialog.h"
 
-#define INI_FILE_NAME ".\\WhatPulseLogitechWidget.ini"
-
 std::string convertWStringToString(std::wstring sourceString);
 std::wstring convertCharToWString(const char* sourceString);
 

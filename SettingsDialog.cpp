@@ -17,6 +17,7 @@
 #include "IniHandler.h"
 
 extern WhatPulseLogitech dlg;
+extern LPWSTR iniDir;
 // SettingsDialog dialog
 
 IMPLEMENT_DYNAMIC(SettingsDialog, CDialog)
@@ -35,7 +36,7 @@ afx_msg void SettingsDialog::ShowWindow(int nCmdShow)
 	// Load Client API URL from the settings ini file
 	CSimpleIniA ini;
 	ini.SetUnicode();
-	ini.LoadFile(INI_FILE_NAME);
+	ini.LoadFile(iniDir);
 	const char *pVal = ini.GetValue("Settings", "ClientAPIURL", "http://localhost:3490/v1/unpulsed");
 	m_clientAPIURL.SetWindowTextW(CA2W(pVal));
 	pVal = ini.GetValue("Settings", "RefreshSeconds", "5");
@@ -64,7 +65,7 @@ SettingsDialog::OnOK()
 	// Save settings to ini configuration file
 	CSimpleIniA ini;
 	ini.SetUnicode();
-	ini.LoadFile(INI_FILE_NAME);
+	ini.LoadFile(iniDir);
 
 	// Retrieve and save the URL
 	m_clientAPIURL.GetWindowText(text, MAX_PATH);
@@ -73,7 +74,7 @@ SettingsDialog::OnOK()
 	m_refreshRate.GetWindowText(text, MAX_PATH);
 	ini.SetValue("Settings", "RefreshSeconds", convertWStringToString(text).c_str());
 	// Save to ini file
-	ini.SaveFile(INI_FILE_NAME);
+	ini.SaveFile(iniDir);
 	// Restart timer in the main window to reset the refresh rate
 	dlg.restartStatsTimer();
 

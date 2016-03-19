@@ -20,6 +20,8 @@
 
 #define LCDSAMPLE_MUTEXNAME _T("WhatPulse_Logitech_Widget_0_1")
 
+LPWSTR iniDir = NULL;
+
 BEGIN_MESSAGE_MAP(WhatPulseLogitechApp, CWinApp)
     ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
@@ -42,6 +44,24 @@ BOOL WhatPulseLogitechApp::InitInstance()
 	{
 		::Sleep(30000);
 	}
+	
+	// Get current directory for ini file storage and add the ini filename to it, so 
+	// we can reference that path in sections where we use settings 
+	TCHAR szPath[MAX_PATH];
+	::GetModuleFileName(AfxGetApp()->m_hInstance, szPath, MAX_PATH);
+	CString csPath(szPath);
+	int nIndex = csPath.ReverseFind(_T('\\'));
+	if (nIndex > 0) {
+		csPath = csPath.Left(nIndex);
+		csPath.Append(_T("\\WhatPulseLogitechWidget.ini"));
+	}
+	else {
+		// Backup plan; home dir
+		csPath.Empty();
+		csPath = ".\\WhatPulseLogitechWidget.ini";
+	}
+
+	iniDir = csPath.GetBuffer();
 
     // InitCommonControlsEx() is required on Windows XP if an application
     // manifest specifies use of ComCtl32.dll version 6 or later to enable
