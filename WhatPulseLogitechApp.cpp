@@ -36,6 +36,13 @@ WhatPulseLogitech dlg;
 
 BOOL WhatPulseLogitechApp::InitInstance()
 {
+	// If there's a "-delayedstart" in the parameters (on system boot), go to sleep for 30 seconds
+	// This is primarily to make sure we give the WhatPulse client some time to start
+	if (StrStrI(AfxGetApp()->m_lpCmdLine, _T("-delayedstart")))
+	{
+		::Sleep(30000);
+	}
+
     // InitCommonControlsEx() is required on Windows XP if an application
     // manifest specifies use of ComCtl32.dll version 6 or later to enable
     // visual styles.  Otherwise, any window creation will fail.
