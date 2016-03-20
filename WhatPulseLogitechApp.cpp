@@ -20,7 +20,7 @@
 
 #define LCDSAMPLE_MUTEXNAME _T("WhatPulse_Logitech_Widget_0_1")
 
-LPWSTR iniDir = NULL;
+LPWSTR iniFile = NULL;
 
 BEGIN_MESSAGE_MAP(WhatPulseLogitechApp, CWinApp)
     ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
@@ -48,20 +48,28 @@ BOOL WhatPulseLogitechApp::InitInstance()
 	// Get current directory for ini file storage and add the ini filename to it, so 
 	// we can reference that path in sections where we use settings 
 	TCHAR szPath[MAX_PATH];
-	::GetModuleFileName(AfxGetApp()->m_hInstance, szPath, MAX_PATH);
-	CString csPath(szPath);
-	int nIndex = csPath.ReverseFind(_T('\\'));
-	if (nIndex > 0) {
-		csPath = csPath.Left(nIndex);
+	CString csPath;
+	// Get path for the local application data, user specific
+	if (SUCCEEDED(SHGetFolderPath(NULL, CSIDL_LOCAL_APPDATA, NULL, 0, szPath)))
+	{
+		// Add our own directory to the path
+		PathAppend(szPath, _T("\\WhatPulse Logitech Widget\\"));
+		// Check if the directory exists and create it if it doesn't
+		if (GetFileAttributes(szPath) == INVALID_FILE_ATTRIBUTES) {
+			CreateDirectory(szPath, NULL);
+		}
+		// Add the ini filename
+		csPath = szPath;
 		csPath.Append(_T("\\WhatPulseLogitechWidget.ini"));
 	}
 	else {
-		// Backup plan; home dir
+		// Backup: local directory
 		csPath.Empty();
 		csPath = ".\\WhatPulseLogitechWidget.ini";
 	}
 
-	iniDir = csPath.GetBuffer();
+	// Save ini file path
+	iniFile = csPath.GetBuffer();
 
     // InitCommonControlsEx() is required on Windows XP if an application
     // manifest specifies use of ComCtl32.dll version 6 or later to enable

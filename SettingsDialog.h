@@ -27,7 +27,8 @@ public:
 	enum { IDD = IDD_SETTINGSDLG };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+	virtual void DoDataExchange(CDataExchange* pDX);      // DDX/DDV support
+	void OnExitClientClicked();
 
 	CEdit m_clientAPIURL;
 	CEdit m_refreshRate;

@@ -95,6 +95,7 @@ BEGIN
     LTEXT           "Default: http://localhost:3490/v1/unpulsed",IDC_STATIC,114,36,138,8
     LTEXT           "Account Totals: http://localhost:3490/v1/account-totals",IDC_STATIC,114,48,186,8
     LTEXT           "When the client and Geek Window are both closed, 5 seconds is the fastest refresh rate.",IDC_STATIC,114,84,144,18
+    PUSHBUTTON      "Exit Widget",IDC_EXITWIDGET,7,113,50,14,BS_NOTIFY
 END
 
 

@@ -31,7 +31,7 @@ typedef std::ostringstream tstringstream;
 #define new DEBUG_NEW
 #endif
 
-extern LPWSTR iniDir;
+extern LPWSTR iniFile;
 
 WhatPulseLogitech::WhatPulseLogitech(CWnd* pParent /*=NULL*/) : CDialog(WhatPulseLogitech::IDD, pParent)
 {
@@ -82,7 +82,7 @@ BOOL WhatPulseLogitech::OnInitDialog()
 	// Initialise default settings if they don't exist yet
 	CSimpleIniA ini;
 	ini.SetUnicode();
-	ini.LoadFile(iniDir);
+	ini.LoadFile(iniFile);
 
 	const char *pVal = ini.GetValue("Settings", "ClientAPIURL", "");
 	if (strcmp(pVal, "") == 0) {
@@ -94,7 +94,7 @@ BOOL WhatPulseLogitech::OnInitDialog()
 		ini.SetValue("Settings", "RefreshSeconds", "5");
 	}
 	// Save ini file
-	ini.SaveFile(iniDir);
+	ini.SaveFile(iniFile);
 
 
 	// Setup both the monochrome and color display layouts
@@ -121,7 +121,7 @@ WhatPulseLogitech::restartStatsTimer()
 	// Get the refresh rate from the ini configuration file
 	CSimpleIniA ini;
 	ini.SetUnicode();
-	ini.LoadFile(iniDir);
+	ini.LoadFile(iniFile);
 
 	// Get the value for the stats refresh timer
 	const char *pVal = ini.GetValue("Settings", "RefreshSeconds", "5");
@@ -378,7 +378,7 @@ VOID WhatPulseLogitech::refeshWhatPulseStats()
 	// Load Client API URL from the settings ini file
 	CSimpleIniA ini;
 	ini.SetUnicode();
-	ini.LoadFile(iniDir);
+	ini.LoadFile(iniFile);
 	const char *pVal = ini.GetValue("Settings", "ClientAPIURL", "http://localhost:3490/v1/unpulsed");
 
 	long bandwidthMultiplier = 1;
