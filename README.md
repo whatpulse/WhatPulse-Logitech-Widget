@@ -15,7 +15,7 @@ Pretty cool, right? :-)
 
 You can change two things about this widget; 1) the time it takes to refresh the stats and 2) the Client API URL it gets the stats from.
 
-There settings are stored in the file *WhatPulseLogitechWidget.ini*, which is stored in the directory where the widget runs from. Here's how it looks by default:
+There settings are stored in the file *WhatPulseLogitechWidget.ini*, which is stored in the local application directory (%LOCALAPPDATA). Here's how it looks by default:
 
 > [Settings]
 
